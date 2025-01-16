@@ -1,6 +1,6 @@
 from airflow import DAG
 
-# import datetime
+import datetime
 import pendulum
 from airflow.operators.bash import BashOperator
 
@@ -15,7 +15,7 @@ with DAG(
 ) as dag:
     bash_t1 = BashOperator(
         task_id="bash_t1",
-        bash_command="echo whoami",
+        bash_command="echo whoami_2",
     )
 
     bash_t2 = BashOperator(
